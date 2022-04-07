@@ -14,8 +14,28 @@
       <th>Books</th>
       <th>Page Count</th>
       <th>Author</th>
+      <th>Readed?</th>
     </tr>
   </table>
+
+  <button id="new-book-button" type="button">
+    New Book
+  </button>
+  <br><br>
+
+  <form action="#" class="hidden" id="new-book-form">
+    <label for="name">Book's Name</label>
+    <input type="text" name="bookName" id="name">
+    <br><br>
+    <label for="page-count">Page Count</label>
+    <input type="text" name="pageCount" id="page-count">
+    <br><br>
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author">
+    <br><br>
+
+    <button type="button" id="createBookButton">Create Book</button>
+  </form>
 
   <script src="js/common.js"></script>
 </body>

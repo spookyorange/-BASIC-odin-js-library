@@ -4,6 +4,7 @@ function Book(name, pageCount, author) {
   this.name = name;
   this.pageCount = pageCount;
   this.author = author;
+  this.read = false;
 }
 
 function addBookToLibrary(book) {
@@ -28,8 +29,19 @@ library.forEach(book => {
   bookName = tableRow.insertCell([0]);
   pageCount = tableRow.insertCell([1]);
   author = tableRow.insertCell([2]);
+  read = tableRow.insertCell([3]);
 
-  bookName.textContent = book.name
-  pageCount.innerHTML = book.pageCount
-  author.textContent = book.author
+  bookName.textContent = book.name;
+  pageCount.textContent = book.pageCount;
+  author.textContent = book.author;
+  read.textContent = book.read;
 });
+
+
+const newBookButton = document.querySelector('#new-book-button')
+const newBookForm = document.querySelector('#new-book-form')
+
+
+newBookButton.addEventListener('click', () => {
+  newBookForm.classList.toggle('hidden')
+})
